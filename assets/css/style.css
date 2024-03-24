@@ -1113,7 +1113,465 @@ section {
 /*--------------------------------------------------------------
 # Calculation form
 --------------------------------------------------------------*/
+#calculation {
+  padding-top: 6%;
+}
+.calculation .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px 0 32px 0;
+  border-radius: 4px;
+}
 
+.calculation .info-box i {
+  font-size: 32px;
+  color: #e03a3c;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #f8d4d5;
+}
+
+.calculation .info-box h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.calculation .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.calculation .php-email-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.calculation .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.calculation .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.calculation .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.calculation .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.calculation .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.calculation .php-email-form .form-group {
+  margin-bottom: 25px;
+}
+
+.calculation .php-email-form input,
+.calculation .php-email-form textarea {
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.calculation .php-email-form input:focus,
+.calculation .php-email-form textarea:focus {
+  border-color: #111111;
+}
+
+.calculation .php-email-form input {
+  padding: 10px 15px;
+}
+
+.calculation .php-email-form textarea {
+  padding: 12px 15px;
+}
+
+.calculation .php-email-form button[type=submit] {
+  background: #e03a3c;
+  border: 0;
+  padding: 10px 32px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.calculation .php-email-form button[type=submit]:hover {
+  background: #e35052;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* The popup form - hidden by default */
+.calculation .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.calculation .form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.calculation .form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.calculation .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.calculation .form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.calculation .form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.calculation .form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Bank Services
+--------------------------------------------------------------*/
+.bankservices .icon-box {
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 6px;
+  background: #252525;
+  transition: 0.3s;
+  position: relative;
+}
+
+.bankservices .icon-box:hover {
+  background: #2b2b2b;
+}
+
+.bankservices .icon-box i {
+  float: left;
+  color: #e03a3c;
+  font-size: 40px;
+  line-height: 0;
+}
+
+.bankservices .icon-box h4 {
+  margin-left: 70px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.bankservices .icon-box h4 a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.bankservices .icon-box h4 a:hover {
+  text-decoration: underline;
+}
+
+.bankservices .icon-box .icon-box:hover h4 a {
+  color: #e03a3c;
+}
+
+.bankservices .icon-box p {
+  margin-left: 70px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Maybank Services
+--------------------------------------------------------------*/
+
+#maybankhero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/maybankhero-bg.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 82px;
+}
+
+#maybankhero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#maybankhero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#maybankhero h2 {
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+#maybankhero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #e03a3c;
+  border: 2px solid #e03a3c;
+}
+
+#maybankhero .btn-get-started:hover {
+  background: transparent;
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  #maybankhero {
+    text-align: center;
+    padding-top: 58px;
+  }
+
+  #maybankhero h1 {
+    font-size: 28px;
+  }
+
+  #maybankhero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  #maybankhero {
+    height: 120vh;
+  }
+}
+
+/*Maybank White About*/
+.maybankwhiteabout .container {
+  position: relative;
+  z-index: 10;
+}
+
+.maybankwhiteabout .content {
+  padding: 30px 30px 30px 0;
+}
+
+.maybankwhiteabout .content h3 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.maybankwhiteabout .content p {
+  margin-bottom: 30px;
+}
+
+.maybankwhiteabout .content .maybankwhiteabout-btn {
+  padding: 8px 30px 9px 30px;
+  color: #111111;
+  border-radius: 50px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #e03a3c;
+}
+
+.maybankwhiteabout .content .maybankwhiteabout-btn i {
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.maybankwhiteabout .content .maybankwhiteabout-btn:hover {
+  background: #e35052;
+  background: #e03a3c;
+}
+
+.maybankwhiteabout .icon-boxes .icon-box {
+  margin-top: 30px;
+}
+
+.maybankwhiteabout .icon-boxes .icon-box i {
+  font-size: 40px;
+  color: #e03a3c;
+  margin-bottom: 10px;
+}
+
+.maybankwhiteabout .icon-boxes .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.maybankwhiteabout .icon-boxes .icon-box p {
+  font-size: 15px;
+  color: #848484;
+}
+
+@media (max-width: 1200px) {
+  .maybankwhiteabout .content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .maybankwhiteabout {
+    text-align: center;
+  }
+}
+
+/*Maybank Black About*/
+.maybankblackabout .container {
+  position: relative;
+  z-index: 10;
+}
+
+.maybankblackabout .content {
+  padding: 30px 30px 30px 0;
+}
+
+.maybankblackabout .content h3 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.maybankblackabout .content p {
+  margin-bottom: 30px;
+}
+
+.maybankblackabout .content .maybankblackabout-btn {
+  padding: 8px 30px 9px 30px;
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #e03a3c;
+}
+
+.maybankblackabout .content .maybankblackabout-btn i {
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.maybankblackabout .content .maybankblackabout-btn:hover {
+  background: #e35052;
+  background: #e03a3c;
+}
+
+.maybankblackabout .icon-boxes .icon-box {
+  margin-top: 30px;
+}
+
+.maybankblackabout .icon-boxes .icon-box i {
+  font-size: 40px;
+  color: #e03a3c;
+  margin-bottom: 10px;
+}
+
+.maybankblackabout .icon-boxes .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.maybankblackabout .icon-boxes .icon-box p {
+  font-size: 15px;
+  color: #848484;
+}
+
+@media (max-width: 1200px) {
+  .maybankblackabout .content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .maybankblackabout {
+    text-align: center;
+  }
+}
 
 /*--------------------------------------------------------------
 # Footer
